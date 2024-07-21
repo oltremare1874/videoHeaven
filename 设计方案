@@ -8,6 +8,7 @@
     user_signature  ： 设为空
     user_favor  ：设为空 
     user_record ：设为空
+
 登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
   账号：user_account
   密码：user_password
@@ -15,8 +16,8 @@
 PS：登录成功后user_account要保留到前端以便后续操作
 
 个人信息页面
-前端传user_account到后端（http://localhost:8888/User/getUseraccount/${user_account})
-信息接口：@GetMapping("/getUserPersonalInformation")  （return 'user_name' 'user_icon' 'user_signature' 'user_favor' 'user_record'）
+前端传user_account到后端接口：http://localhost:8888/User/getUseraccount/${user_account}
+后端传前端接口：@GetMapping("/getUserPersonalInformation")  （return 'user_name' 'user_icon' 'user_signature' 'user_favor' 'user_record'）
 
 测试相关问题：
     账号是否存在？
