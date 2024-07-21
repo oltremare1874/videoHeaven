@@ -12,16 +12,26 @@
 
 ​	个性签名：        user_signature     		  	VARCHAR（255）
 
-​	收藏：            user_favor   					    TEXT（idea中字符串数组存video_url）
-
-​	观看记录：        user_record               		  TEXT（idea中字符串数组存video_url）
-
     删除标志位：           del 
 
     创建时间：        createtime
 
     编辑时间：        updatetime
  
+收藏表名： favor_table
+
+​	账号：            user_account     			    VARCHAR（50） 
+
+​    网址：         	video_url            		 VARCHAR（255）
+
+    删除标志位：           del 
+
+    创建时间：        createtime
+
+    编辑时间：        updatetime
+
+观看记录表：
+
 
 视频表名：video_table
 
