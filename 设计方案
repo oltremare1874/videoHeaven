@@ -17,5 +17,9 @@
 个人信息页面
 信息接口：@GetMapping("/getUser")  （return 'user_name' 'user_icon' 'user_signature' 'user_favor' 'user_record'）
 
-
+测试相关问题：
+    账号是否存在？
+    账号密码是否对应？
+    账号密码长度问题？
+    个人信息是否对应？
   
