@@ -1,6 +1,14 @@
 @RequestMapping("/www.videoheaven.com")    
 
-注册：register （前端传后端数据库保存 ‘account’，‘password’，‘favor=[ ]‘）
+注册：register （前端传后端数据库保存）
+    user_id：自动+1
+    user_account：前端获取
+    user_password ： 前端获取
+    user_name： 前端获取
+    user_icon： 设为空
+    user_signature  ： 设为空
+    user_favor  ：设为空 
+    user_record ：设为空
 登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
   账号：account
   密码：password
