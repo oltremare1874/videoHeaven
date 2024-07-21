@@ -43,19 +43,19 @@
 
 ​	  播放量：   	    video_playnum    	   INT
 
-      点赞用户：
+      点赞用户：        video_gooduser    TEXT
 
 ​	  点赞数：         video_goodnum   	   INT
 
-      点踩用户：
+      点踩用户：        video_baduser    TEXT
 
 ​	  点踩数：   	    video_badnum    		INT
 
-      收藏用户：
+      收藏用户：        video_favoruser    TEXT
 
 ​	  收藏数：         video_favornum   	   INT
 
-      分享用户：
+      分享用户：        video_shareuser    TEXT
 
 ​	  分享数：         video_sharenum   	  INT
 
