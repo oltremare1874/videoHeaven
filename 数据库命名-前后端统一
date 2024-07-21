@@ -6,15 +6,15 @@
 
 ​	  密码：            user_password   			   VARCHAR（50）
 
-​	  昵称：			user_name       				  VARCHAR（50）
+​	  昵称：			        user_name       				  VARCHAR（50）
 
 ​	  头像：            user_icon          				  VARCHAR（50）
 
-​	  个性签名：    user_signature     		  	VARCHAR（255）
+​	  个性签名：        user_signature     		  	VARCHAR（255）
 
 ​	  收藏：            user_favor   					    TEXT（idea中字符串数组存video_url）
 
-​	  观看记录：    user_record               		  TEXT（idea中字符串数组存video_url）
+​	  观看记录：        user_record               		  TEXT（idea中字符串数组存video_url）
   
  
 
