@@ -30,7 +30,17 @@
 
     编辑时间：        updatetime
 
-观看记录表：
+观看记录表： record_table
+
+​	账号：            user_account     			    VARCHAR（50） 
+
+​    网址：         	video_url            		 VARCHAR（255）
+
+    删除标志位：           del 
+
+    创建时间：        createtime
+
+    编辑时间：        updatetime
 
 
 视频表名：video_table
