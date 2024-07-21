@@ -10,8 +10,8 @@
     user_favor  ：设为空 
     user_record ：设为空
 登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
-  账号：account
-  密码：password
+  账号：user_account
+  密码：user_password
 登录接口：@GetMapping("/getIslogin")  （return islogin=true/false）
 
 个人信息页面
