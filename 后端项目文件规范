@@ -1,0 +1,62 @@
+
+src	
+
+​	main
+
+​			java
+
+​					com.videoheaven
+
+​								.controller	
+
+​											VideoController.java
+
+​											UserController.java
+
+​								.dao
+
+​											.impl
+
+​													VideoDaoImpl.java
+
+​													UserDaoImpl.java
+
+​											.mapper
+
+​													IVideoMapper
+
+​													IUerMapper
+
+​											IUserDao
+
+​											IVedioDao
+
+​								.entity
+
+​											Video
+
+​											User
+
+​								.service
+
+​											.impl
+
+​														VideoServiceImpl.java
+
+​														UserServiceImpl.java
+
+​											IVideoService
+
+​											IUserService
+
+​								VedioHeavenApplication.java
+
+​			resources
+
+​					.mapper
+
+​								VideoMapper.xml
+
+​								UserMapper.xml
+
+​					application.yml (接口统一localhost：8888)
