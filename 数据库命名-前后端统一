@@ -63,19 +63,11 @@
 
 ​	  播放量：   	    video_playnum    	   INT
 
-      点赞用户：        video_gooduser    TEXT
-
 ​	  点赞数：         video_goodnum   	   INT
-
-      点踩用户：        video_baduser    TEXT
 
 ​	  点踩数：   	    video_badnum    		INT
 
-      收藏用户：        video_favoruser    TEXT
-
 ​	  收藏数：         video_favornum   	   INT
-
-      分享用户：        video_shareuser    TEXT
 
 ​	  分享数：         video_sharenum   	  INT
 
@@ -84,3 +76,8 @@
     创建时间：        createtime
 
     编辑时间：        updatetime
+
+点赞用户表：
+点踩用户表：
+收藏用户表：
+分享用户表：
