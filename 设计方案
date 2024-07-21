@@ -1,4 +1,4 @@
-@RequestMapping("/www.videoheaven.com")    
+@RequestMapping("/videoheaven")    
 
 注册：register （前端传后端数据库保存）
     user_id：自动+1
