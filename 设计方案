@@ -12,7 +12,7 @@
 登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
   账号：account
   密码：password
-登录接口：@GetMapping("/getIslogin")
+登录接口：@GetMapping("/getIslogin")  （bool islogin=true/false）
 
 
   
