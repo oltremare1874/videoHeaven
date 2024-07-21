@@ -15,7 +15,12 @@
 ​	  收藏：            user_favor   					    TEXT（idea中字符串数组存video_url）
 
 ​	  观看记录：        user_record               		  TEXT（idea中字符串数组存video_url）
-  
+
+    删除标志位：           del 
+
+    创建时间：        createtime
+
+    编辑时间：        updatetime
  
 
 视频表名：video_table
@@ -45,3 +50,9 @@
 ​	  收藏数：         video_favornum   	   INT
 
 ​	  分享数：         video_sharenum   	  INT
+
+    删除标志位：           del 
+
+    创建时间：        createtime
+
+    编辑时间：        updatetime
