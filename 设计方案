@@ -8,6 +8,7 @@
     user_signature  ： 设为空
     user_favor  ：设为空 
     user_record ：设为空
+    del=0
 
 登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
   账号：user_account
