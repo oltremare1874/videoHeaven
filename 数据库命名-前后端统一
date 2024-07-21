@@ -22,26 +22,26 @@
 
 ​    主键Id:        	video_id           		（INT PRIMARY KEY AUTO_INCREMENT）
 
-​    网址：       	video_url            		 VARCHAR（255）
+​    网址：         	video_url            		 VARCHAR（255）
 
-​    标题：        	video_title             	 VARCHAR（30）
+​    标题：          	video_title             	 VARCHAR（30）
 
-​	  标签：      	  video_tag         	 	 TEXT（idea中字符串数组存video_url）
+​	  标签：      	    video_tag         	 	 TEXT（idea中字符串数组存video_url）
 
-​	  导演：        	video_director       	VARCHAR（30）
+​	  导演：          	video_director       	VARCHAR（30）
 
-​	  主演：       	 video_performer   	TEXT（idea中字符串数组存video_url）
+​	  主演：       	  video_performer   	TEXT（idea中字符串数组存video_url）
 
-​	  剧情简介：    video_introduction    TEXT
+​	  剧情简介：       video_introduction    TEXT
 
-​	  评论：       	 video_comment   	  TEXT（idea中字符串数组存video_url）
+​	  评论：       	  video_comment   	  TEXT（idea中字符串数组存video_url）
 
-​	  播放量：   	 video_playnum    	   INT
+​	  播放量：   	    video_playnum    	   INT
 
-​	  点赞数：        video_goodnum   	   INT
+​	  点赞数：         video_goodnum   	   INT
 
-​	  点踩数：   	 video_badnum    		INT
+​	  点踩数：   	    video_badnum    		INT
 
-​	  收藏数：        video_favornum   	   INT
+​	  收藏数：         video_favornum   	   INT
 
-​	  分享数：        video_sharenum   	  INT
+​	  分享数：         video_sharenum   	  INT
