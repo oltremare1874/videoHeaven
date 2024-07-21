@@ -1,0 +1,4 @@
+注册：register （前端传后端数据库保存 ‘account’，‘password’，‘favor=[ ]‘）
+登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
+账号：account
+密码：password
