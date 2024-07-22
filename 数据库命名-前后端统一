@@ -12,6 +12,8 @@
 
 ​	个性签名：        user_signature     		  	VARCHAR（255）
 
+    收藏数：          user_favorite_num         INT
+
     删除标志位：           del 
 
     创建时间：        createtime
@@ -62,6 +64,12 @@
 ​	  收藏数：         video_favornum   	   INT
 
 ​	  分享数：         video_sharenum   	  INT
+
+      评论数：         video_
+
+      视频评分：        video_
+
+      视频封面：         video_icon
 
     删除标志位：           del 
 
