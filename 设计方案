@@ -54,5 +54,12 @@ PS：登录成功后user_account要保留到前端以便后续操作
 视频相关
 @RequestMapping("/Video)   
 视频信息页面
-信息接口：@GetMapping("/getVideoInformation")  （return *）
+信息接口："/getVideoInformation" 
+后端： @GetMapping("/getVideoInformation")    
+        public String getIsLogin(String *) {return string="true"/"false"}
+前端：axios.get('http://localhost:8888/Video/getVideoInformation',{
+      params:{
+        *
+      }
+      }).then((respond) => {***
 
