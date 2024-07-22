@@ -47,19 +47,13 @@
 
 ​    主键Id:        	video_id           		（INT PRIMARY KEY AUTO_INCREMENT）
 
-​    网址：         	video_url            		 VARCHAR（255）
-
-​    标题：          	video_title             	 VARCHAR（30）
+​    名字：          	video_title             	 VARCHAR（30）
 
 ​	  标签：      	    video_tag         	 	 TEXT（idea中字符串数组存video_url）
 
-​	  导演：          	video_director       	VARCHAR（30）
+​	  发布者：          	video_director       	VARCHAR（30）
 
-​	  主演：       	  video_performer   	TEXT（idea中字符串数组存video_url）
-
-​	  剧情简介：       video_introduction    TEXT
-
-​	  评论：       	  video_comment   	  TEXT（idea中字符串数组存video_url）
+​	  视频简介：       video_introduction    TEXT
 
 ​	  播放量：   	    video_playnum    	   INT
 
