@@ -1,3 +1,4 @@
+用户相关
 @RequestMapping("/User)    
 注册：register （前端传后端数据库保存）
     user_id：自动+1
@@ -25,4 +26,10 @@ PS：登录成功后user_account要保留到前端以便后续操作
     账号密码是否对应？
     账号密码长度问题？
     个人信息是否对应？
-  
+
+
+视频相关
+@RequestMapping("/Video)   
+视频信息页面
+信息接口：@GetMapping("/getVideoInformation")  （return *）
+
