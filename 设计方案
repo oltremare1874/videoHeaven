@@ -10,7 +10,7 @@
     user_icon： 设为空
     user_signature  ： 设为空
     del=0
-注册接口："/getIsregister"
+注册接口："/getIsRegister"
 后端： @GetMapping("/getIsRegister")    
         public String getIsRegister(String account, String password，String name) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsRegister',{
