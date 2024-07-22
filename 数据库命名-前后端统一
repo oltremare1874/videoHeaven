@@ -47,7 +47,7 @@
 
 ​    主键Id:        	video_id           		（INT PRIMARY KEY AUTO_INCREMENT）
 
-​    名字：          	video_title             	 VARCHAR（30）
+​    视频名：          	video_title             	 VARCHAR（30）
 
 ​	  标签：      	    video_tag         	 	 TEXT（idea中字符串数组存video_url）
 
@@ -74,3 +74,8 @@
 点赞用户表：
 点踩用户表：
 收藏用户表：
+评论表：
+    视频名
+    用户名
+    打分
+    评论
