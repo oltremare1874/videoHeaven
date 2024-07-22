@@ -59,8 +59,6 @@
 
 ​	  点赞数：         video_goodnum   	   INT
 
-​	  点踩数：   	    video_badnum    		INT
-
 ​	  收藏数：         video_favornum   	   INT
 
 ​	  分享数：         video_sharenum   	  INT
