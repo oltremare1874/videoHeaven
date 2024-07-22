@@ -9,15 +9,16 @@
     user_favor  ：设为空 
     user_record ：设为空
     del=0
+注册接口：@GetMapping("/getIsregister")  （return string类型=true/false）
 
 登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
   账号：user_account
   密码：user_password
-后端传前端 登录接口：@GetMapping("/getIslogin")  （return islogin=true/false）
+登录接口：@GetMapping("/getIslogin")  （return string类型=true/false）
 PS：登录成功后user_account要保留到前端以便后续操作
 
 个人信息页面
-后端传前端 信息接口：@GetMapping("/getUserPersonalInformation")  （return 'user_name' 'user_icon' 'user_signature' 'user_favor' 'user_record'）
+信息接口：@GetMapping("/getUserPersonalInformation")  （return 'user_name' 'user_icon' 'user_signature' 'user_favor' 'user_record'）
 
 测试相关问题：
     账号是否存在？
