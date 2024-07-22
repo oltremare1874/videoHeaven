@@ -9,8 +9,6 @@
     user_name： 前端获取
     user_icon： 设为空
     user_signature  ： 设为空
-    user_favor  ：设为空 
-    user_record ：设为空
     del=0
 注册接口："/getIsregister"
 后端： @GetMapping("/getIsregister")    
