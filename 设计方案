@@ -42,7 +42,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 个人信息页面
 信息接口："/getUserPersonalInformation"
 后端： @GetMapping("/getUserPersonalInformation")    
-        public List* getUserPersonalInformation(String account) {return list*}
+        public List getUserPersonalInformation(String account) {return list*}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
         account: user_account.value
@@ -90,7 +90,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 视频信息页面
 信息接口："/getVideoInformation" 
 后端： @GetMapping("/getVideoInformation")    
-        public List getVideoInformation(String title) {return list}
+        public List getVideoInformation(String title) {return list*}
 前端：axios.get('http://localhost:8888/Video/getVideoInformation',{
       params:{
         title: video_title.value
