@@ -14,7 +14,7 @@
     del=0
 注册接口："/getIsregister"
 后端： @GetMapping("/getIsregister")    
-        public String getIsLogin(String account, String password，String name) {return string="true"/"false"}
+        public String getIsregister(String account, String password，String name) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsregister',{
       params:{
         account: *
@@ -41,13 +41,39 @@ PS：登录成功后user_account要保留到前端以便后续操作
 个人信息页面
 信息接口："/getUserPersonalInformation"
 后端： @GetMapping("/getUserPersonalInformation")    
-        public String getIsLogin(String account) {return string="true"/"false"}
+        public List* getUserPersonalInformation(String account) {return list*}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
         account: *
       }
       }).then((respond) => {***
-修改接口：
+修改昵称接口："/UpdateUsername"
+后端： @GetMapping("/UpdateUsername")    
+        public * UpdateUsername(String account, String Newname) {return *}
+前端：axios.get('http://localhost:8888/User/UpdateUsername',{
+      params:{
+        account: *
+        Newname: *
+      }
+      }).then((respond) => {***
+修改头像接口："/UpdateUsericon"
+后端： @GetMapping("/UpdateUsericon")    
+        public * UpdateUsericon(String account, String Newicon) {return *}
+前端：axios.get('http://localhost:8888/User/UpdateUsericon',{
+      params:{
+        account: *
+        Newicon: *
+      }
+      }).then((respond) => {***
+修改个性签名接口："/UpdateUsersignature"
+后端： @GetMapping("/UpdateUsersignature")    
+        public * UpdateUsersignature(String account, String Newsignature) {return *}
+前端：axios.get('http://localhost:8888/User/UpdateUsersignature',{
+      params:{
+        account: *
+        Newsignature: *
+      }
+      }).then((respond) => {***
 
 测试相关问题：
     账号是否存在？
@@ -61,7 +87,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 视频信息页面
 信息接口："/getVideoInformation" 
 后端： @GetMapping("/getVideoInformation")    
-        public String getIsLogin(String *) {return string="true"/"false"}
+        public List getVideoInformation(String *) {return list}
 前端：axios.get('http://localhost:8888/Video/getVideoInformation',{
       params:{
         *
