@@ -17,9 +17,9 @@
         public String getIsregister(String account, String password，String name) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsregister',{
       params:{
-        account: *
-        password: *
-        name: *
+        account: user_account.value
+        password: user_password.value
+        name: user_name.value
       }
       }).then((respond) => {***
 
@@ -32,11 +32,12 @@
         public String getIsLogin(String account, String password) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsLogin',{
       params:{
-        account: *
+        account: user_account.value
         password: *
       }
       }).then((respond) => {***
 PS：登录成功后user_account要保留到前端以便后续操作
+
 
 个人信息页面
 信息接口："/getUserPersonalInformation"
@@ -44,7 +45,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
         public List* getUserPersonalInformation(String account) {return list*}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
-        account: *
+        account: user_account.value
       }
       }).then((respond) => {***
 修改昵称接口："/UpdateUsername"
@@ -52,7 +53,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
         public * UpdateUsername(String account, String Newname) {return *}
 前端：axios.get('http://localhost:8888/User/UpdateUsername',{
       params:{
-        account: *
+        account: user_account.value
         Newname: *
       }
       }).then((respond) => {***
@@ -61,7 +62,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
         public * UpdateUsericon(String account, String Newicon) {return *}
 前端：axios.get('http://localhost:8888/User/UpdateUsericon',{
       params:{
-        account: *
+        account: user_account.value
         Newicon: *
       }
       }).then((respond) => {***
@@ -70,7 +71,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
         public * UpdateUsersignature(String account, String Newsignature) {return *}
 前端：axios.get('http://localhost:8888/User/UpdateUsersignature',{
       params:{
-        account: *
+        account: user_account.value
         Newsignature: *
       }
       }).then((respond) => {***
@@ -82,15 +83,55 @@ PS：登录成功后user_account要保留到前端以便后续操作
     个人信息是否对应？
 
 
+
+
 视频相关
 @RequestMapping("/Video)   
 视频信息页面
 信息接口："/getVideoInformation" 
 后端： @GetMapping("/getVideoInformation")    
-        public List getVideoInformation(String *) {return list}
+        public List getVideoInformation(String title) {return list}
 前端：axios.get('http://localhost:8888/Video/getVideoInformation',{
       params:{
-        *
+        title: video_title.value
       }
       }).then((respond) => {***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
