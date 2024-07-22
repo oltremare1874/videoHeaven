@@ -41,9 +41,10 @@ PS：登录成功后user_account要保留到前端以便后续操作
 个人信息页面
 信息接口："/getUserPersonalInformation"
 后端： @GetMapping("/getUserPersonalInformation")    
-        public String getIsLogin(String *) {return string="true"/"false"}
+        public String getIsLogin(String account) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
+        account: *
       }
       }).then((respond) => {***
 修改接口：
