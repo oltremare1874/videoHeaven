@@ -44,8 +44,6 @@ PS：登录成功后user_account要保留到前端以便后续操作
         public String getIsLogin(String *) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
-        account: user_account.value, 
-        password: user_password.value
       }
       }).then((respond) => {***
 修改接口：
