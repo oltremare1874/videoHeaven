@@ -17,9 +17,9 @@
         public String getIsLogin(String account, String password，String name) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsregister',{
       params:{
-        account: user_account.value, 
-        password: user_password.value,
-        name: user_name.value
+        account: *
+        password: *
+        name: *
       }
       }).then((respond) => {***
 
@@ -32,8 +32,8 @@
         public String getIsLogin(String account, String password) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsLogin',{
       params:{
-        account: user_account.value, 
-        password: user_password.value
+        account: *
+        password: *
       }
       }).then((respond) => {***
 PS：登录成功后user_account要保留到前端以便后续操作
