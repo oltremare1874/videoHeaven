@@ -1,5 +1,7 @@
 用户相关
 @RequestMapping("/User)    
+
+
 注册：register （前端传后端数据库保存）
     user_id：自动+1
     user_account：前端获取
@@ -10,9 +12,19 @@
     user_favor  ：设为空 
     user_record ：设为空
     del=0
-注册接口：@GetMapping("/getIsregister")  （return string类型=true/false）
+注册接口："/getIsregister"
+后端： @GetMapping("/getIsregister")    
+        public String getIsLogin(String account, String password，String name) {return string="true"/"false"}
+前端：axios.get('http://localhost:8888/User/getIsregister',{
+      params:{
+        account: user_account.value, 
+        password: user_password.value,
+        name: user_name.value
+      }
+      }).then((respond) => {***
 
-登录：login （用后端数据进行匹配，匹配结果bool islogin=true/false传前端）
+
+登录：login （用后端数据进行匹配）
   账号：user_account
   密码：user_password
 登录接口："/getIslogin"
@@ -23,7 +35,7 @@
         account: user_account.value, 
         password: user_password.value
       }
-      }).then((islogin) => {
+      }).then((respond) => {***
 PS：登录成功后user_account要保留到前端以便后续操作
 
 个人信息页面
