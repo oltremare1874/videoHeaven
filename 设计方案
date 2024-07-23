@@ -40,39 +40,65 @@ PS：登录成功后user_account要保留到前端以便后续操作
 个人信息页面
 信息接口："/getUserPersonalInformation"
 后端： @GetMapping("/getUserPersonalInformation")    
-        public List getUserPersonalInformation(String id) {return list*}
+        public List getUserPersonalInformation(String userId) { return userService.getUserPersonalInformation(userId);}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
-        account: user_account.value
+        userId: user_id.value
       }
       }).then((respond) => {***
+
+
+
 修改昵称接口："/UpdateUsername"
-后端： @GetMapping("/UpdateUsername")    
-        public * UpdateUser name(String id, String Newname) {return *}
+后端： @PostMapping("/updateUserName")
+      public boolean updateUserName(@RequestParam int userId,@RequestParam String userName){
+        return userService.updateUserName(userId, userName);
+    }
 前端：axios.get('http://localhost:8888/User/UpdateUsername',{
       params:{
-        account: user_account.value
-        Newname: *
+        userId: user_id.value
+        userName: *
       }
       }).then((respond) => {***
+
 修改头像接口："/UpdateUsericon"
 后端： @GetMapping("/UpdateUsericon")    
-        public * UpdateUsericon(String account, String Newicon) {return *}
+        public * UpdateUsericon(String userId, String Newicon) {return *}
 前端：axios.get('http://localhost:8888/User/UpdateUsericon',{
       params:{
-        account: user_account.value
+        userid: user_id.value
         Newicon: *
       }
       }).then((respond) => {***
+
+
 修改个性签名接口："/UpdateUsersignature"
-后端： @GetMapping("/UpdateUsersignature")    
-        public * UpdateUsersignature(String account, String Newsignature) {return *}
+后端： public boolean updateUserSignature(@RequestParam int userId,@RequestParam String userSignature){
+        return userService.updateUserSignature(userId, userSignature);
+    }
 前端：axios.get('http://localhost:8888/User/UpdateUsersignature',{
       params:{
-        account: user_account.value
-        Newsignature: *
+        userid: user_id.value
+        userSignature: *
       }
       }).then((respond) => {***
+
+根据用户账号查询用户id:"/getUserIdByUserAccount"
+后端:@GetMapping("/getUserIdByUserAccount")
+    public int getUserIdByUserAccount(@RequestParam String userAccount){
+        return userService.getUserIdByUserAccount(userAccount);
+    }
+前端：axios.get('http://localhost:8888/User/getUserIdByUserAccount',{
+      params:{
+        userAccount: user_account.value
+      }
+      }).then((respond) => {***
+
+
+
+
+
+  
 
 
 
@@ -97,14 +123,81 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }
       }).then((respond) => {***
 
-评论相关
-后端：@GetMappering("/getComment")
+@RequestMapping("/Video/interaction")
+改变点赞状态："/toggleLike"
+后端：PostMapping("/toggleLike")
+    public boolean toggleLike(@RequestParam int userId,@RequestParam int videoId){
+        return videoInteractionService.toggleLike(userId, videoId);
+    }
+前端：axios.get('http://localhost:8888/Video/interaction/toggleLike',{
+      params:{
+        userId: user_id.value
+        videoId: video_id.value
+      }
+      }).then((respond) => {***
 
-前端：axios.get('http://localhost:8888/Video/getComment',{
-     params:{
-       
-     }
-}).then((respond) =>{***
+
+判断用户对视频是否点赞成功："/isLiked"
+后端：GetMapping("/isLiked")
+    public boolean isLiked(@RequestParam int userId,@RequestParam int videoId){
+        return videoInteractionService.isLiked(userId, videoId);
+    }
+
+前端：axios.get('http://localhost:8888/Video/interaction/isLiked',{
+      params:{
+        userId: user_id.value
+        videoId: video_id.value
+      }
+      }).then((respond) => {***
+
+
+
+改变收藏状态："/toggleFavorite"
+后端：PostMapping("/toggleFavorite")
+    public boolean toggleFavorite(@RequestParam int userId,@RequestParam int videoId){
+        return videoInteractionService.toggleFavorite(userId, videoId);
+    }
+前端：axios.get('http://localhost:8888/Video/interaction/toggleFavorite',{
+      params:{
+        userId: user_id.value
+        videoId: video_id.value
+      }
+      }).then((respond) => {***
+
+
+
+判断用户对视频是否收藏："/isFavorited"
+后端：@GetMapping("/isFavorited")
+    public boolean isFavorited(@RequestParam int userId,@RequestParam int videoId){
+        return videoInteractionService.isFavorited(userId, videoId);
+    }
+前端：axios.get('http://localhost:8888/Video/interaction/isFavorited',{
+      params:{
+        userId: user_id.value
+        videoId: video_id.value
+      }
+      }).then((respond) => {***
+
+
+根据用户id查询用户收藏的所有视频:"/getUserFavorites"
+后端：@GetMapping("/getUserFavorites")
+    public List<Video> getUserFavorites(@RequestParam int userId){
+        return videoInteractionService.getUserFavorites(userId);
+    }
+前端:axios.get('http://localhost:8888/Video/interaction/getUserFavorites',{
+      params:{
+        userId: user_id.value
+      }
+      }).then((respond) => {***
+
+
+
+
+
+
+
+
+
 
 
 
