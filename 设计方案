@@ -101,6 +101,8 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
+
+
   
 
 
@@ -182,7 +184,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }).then((respond) => {***
 
 
-根据用户id查询用户收藏的所有视频:"/getUserFavorites"
+根据用户id查询用户收藏的所有视频(使用分步查询):"/getUserFavorites"
 后端：@GetMapping("/getUserFavorites")
     public List<Video> getUserFavorites(@RequestParam int userId){
         return videoInteractionService.getUserFavorites(userId);
@@ -194,17 +196,49 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }).then((respond) => {***
 
 
-
-根据用户id查询用户的观看记录："/getUserWatched"
-后端:@GetMapping("/getUserWatched")
-     public List<Video> getUserWatched(@RequestParam int userId){
-            return videoInteractionService.getUserWatched(userId);
-     }
-前端:axios.get('http://localhost:8888/Video/interaction/getUserWatched',{
+根据用户id查询用户收藏的所有视频，返回所有收藏的视频,使用关联查询:"/getFavoriteVideoByUserId"
+后端:@GetMapping("/getFavoriteVideosByUserId")
+    public List<Video> getFavoriteVideosByUserId(@RequestParam int userId){
+        return videoInteractionService.getFavoriteVideosByUserId(userId);
+    }
+前端::axios.get('http://localhost:8888/Video/interaction/getFavoriteVideosByUserId',{
       params:{
         userId: user_id.value
       }
       }).then((respond) => {***
+
+
+
+添加观看记录，成功添加返回true，失败返回false:"/addViewRecord"
+    @PostMapping("/addViewRecord")
+    public boolean addViewRecord(@RequestParam int userId,@RequestParam int videoId){
+        return videoInteractionService.addViewRecord(userId, videoId);
+    }
+前端:axios.get('http://localhost:8888/Video/interaction/addViewRecord',{
+      params:{
+        userId: user_id.value
+        videoId: video_id.value
+      }
+      }).then((respond) => {***
+
+
+ 查询观看记录，对于观看多次的视频只显示最近一次，返回按时间排序的观看记录列表和视频信息列表:"/getLatestViewRecordsByUserId"
+    @GetMapping("/getLatestViewRecordsByUserId")
+    public List<ViewRecord> getLatestViewRecordsByUserId(@RequestParam int userId) {
+        return videoInteractionService.getLatestViewRecordsByUserId(userId);
+    }
+前端:axios.get('http://localhost:8888/Video/interaction/addViewRecord',{
+      params:{
+        userId: user_id.value
+      }
+      }).then((respond) => {***
+
+
+
+
+
+
+
 
 
 评论相关
