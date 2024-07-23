@@ -98,6 +98,9 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
+
+
+
   
 
 
@@ -192,6 +195,20 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
+根据用户id查询用户的观看记录："/getUserWatched"
+后端:@GetMapping("/getUserWatched")
+     public List<Video> getUserWatched(@RequestParam int userId){
+            return videoInteractionService.getUserWatched(userId);
+     }
+前端:axios.get('http://localhost:8888/Video/interaction/getUserWatched',{
+      params:{
+        userId: user_id.value
+      }
+      }).then((respond) => {***
+
+
+评论相关
+   需要返回评论者头像，昵称，对视频的评分，评论
 
 
 
@@ -218,6 +235,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
     分享数
     视频评分
     视频封面
+
 
 
 
