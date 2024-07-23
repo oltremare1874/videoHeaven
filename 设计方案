@@ -14,7 +14,7 @@
 后端： @GetMapping("/getIsRegister")    
         public String getIsRegister(String account, String password，String name) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsRegister',{
-      params:{
+      params:{ 
         account: user_account.value
         password: user_password.value
         name: user_name.value
@@ -25,7 +25,7 @@
 登录：login （用后端数据进行匹配）
   账号：user_account
   密码：user_password
-登录接口："/getIslogin"
+登录接口："/getIsLoginn"
 后端： @GetMapping("/getIsLogin")    
         public String getIsLogin(String account, String password) {return string="true"/"false"}
 前端：axios.get('http://localhost:8888/User/getIsLogin',{
@@ -35,7 +35,6 @@
       }
       }).then((respond) => {***
 PS：登录成功后user_account要保留到前端以便后续操作
-
 
 个人信息页面
 信息接口(user_name, user_icon, user_signature, user_favorite_num)："/getUserPersonalInformation"
@@ -49,7 +48,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
-修改昵称接口："/UpdateUsername"
+修改昵称接口："/updateUserName"
 后端： @PostMapping("/updateUserName")
       public boolean updateUserName(@RequestParam int userId,@RequestParam String userName){
         return userService.updateUserName(userId, userName);
@@ -61,10 +60,10 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }
       }).then((respond) => {***
 
-修改头像接口："/UpdateUsericon"
+修改头像接口："/updateUserIcon"
 后端： @GetMapping("/UpdateUsericon")    
         public * UpdateUsericon(String userId, String Newicon) {return *}
-前端：axios.get('http://localhost:8888/User/UpdateUsericon',{
+前端：axios.get('http://localhost:8888/User/updateUserIcon',{
       params:{
         userid: user_id.value
         Newicon: *
@@ -72,11 +71,11 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }).then((respond) => {***
 
 
-修改个性签名接口："/UpdateUsersignature"
+修改个性签名接口："/updateUserSignature"
 后端： public boolean updateUserSignature(@RequestParam int userId,@RequestParam String userSignature){
         return userService.updateUserSignature(userId, userSignature);
     }
-前端：axios.get('http://localhost:8888/User/UpdateUsersignature',{
+前端：axios.get('http://localhost:8888/User/updateUserSignature',{
       params:{
         userid: user_id.value
         userSignature: *
