@@ -38,7 +38,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 个人信息页面
-信息接口："/getUserPersonalInformation"
+信息接口(user_name, user_icon, user_signature, user_favorite_num)："/getUserPersonalInformation"
 后端： @GetMapping("/getUserPersonalInformation")    
         public List getUserPersonalInformation(String userId) { return userService.getUserPersonalInformation(userId);}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
