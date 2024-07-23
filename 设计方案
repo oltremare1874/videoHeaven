@@ -40,7 +40,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 个人信息页面
 信息接口："/getUserPersonalInformation"
 后端： @GetMapping("/getUserPersonalInformation")    
-        public List getUserPersonalInformation(String account) {return list*}
+        public List getUserPersonalInformation(String id) {return list*}
 前端：axios.get('http://localhost:8888/User/getUserPersonalInformation',{
       params:{
         account: user_account.value
@@ -48,7 +48,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }).then((respond) => {***
 修改昵称接口："/UpdateUsername"
 后端： @GetMapping("/UpdateUsername")    
-        public * UpdateUsername(String account, String Newname) {return *}
+        public * UpdateUser name(String id, String Newname) {return *}
 前端：axios.get('http://localhost:8888/User/UpdateUsername',{
       params:{
         account: user_account.value
@@ -74,6 +74,8 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }
       }).then((respond) => {***
 
+
+
 测试相关问题：
     账号是否存在？
     账号密码是否对应？
@@ -95,6 +97,17 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }
       }).then((respond) => {***
 
+评论相关
+后端：@GetMappering("/getComment")
+
+前端：axios.get('http://localhost:8888/Video/getComment',{
+     params:{
+       
+     }
+}).then((respond) =>{***
+
+
+
 
 
 
@@ -112,6 +125,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
     分享数
     视频评分
     视频封面
+
 
 
 
