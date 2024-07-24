@@ -255,6 +255,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 搜索页面：
+    可根据观看数、点赞数、收藏数分别排序查看结果
     需要返回匹配数量
     视频名字
     发表者头像
@@ -268,12 +269,9 @@ PS：登录成功后user_account要保留到前端以便后续操作
     分享数
     视频评分
     视频封面
-后端：public SearchResult SearchVideoResult(String searchkey){
-        int searchVideoNum = videoDao.searchVideoNum(searchkey);
-        List<Video> searchVideoInformation = videoDao.searchVideoInformation(searchkey);
-        SearchResult searchvideoresult = new SearchResult(searchVideoNum,searchVideoInformation);
-
-        return searchvideoresult;
+后端：@GetMapping("/searchVideoInformation")
+    public SearchResult SearchVideoResult(String searchkey){
+        return videoServiceImpl.SearchVideoResult(searchkey);
     }
 
 
