@@ -271,6 +271,8 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
+
+
 根据视频id获取该视频所有评论，按评论时间由近到远排序，返回视频评论信息和用户昵称，用户头像
 后端：@GetMapping("/getCommentsByVideoId")
     public List<CommentWithUser> getCommentsByVideoId(@RequestParam int videoId){
