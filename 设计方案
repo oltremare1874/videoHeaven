@@ -253,7 +253,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
-
+@RequestMapping("/Search")
 搜索页面：
     可根据观看数、点赞数、收藏数分别排序查看结果
     需要返回匹配数量
@@ -269,12 +269,24 @@ PS：登录成功后user_account要保留到前端以便后续操作
     分享数
     视频评分
     视频封面
-后端：@GetMapping("/searchVideoInformation")
-    public SearchResult SearchVideoResult(String searchkey){
-        return videoServiceImpl.SearchVideoResult(searchkey);
+后端：根据观看数排序：@GetMapping("/searchVideoResultOrderByView")
+    public SearchResult SearchVideoResultOrderByView(String searchkey ){
+
+        return videoServiceImpl.SearchVideoResultOrderByView(searchkey);
     }
 
+    根据点赞数排序：@GetMapping("/searchVideoResultOrderByLike")
+    public SearchResult SearchVideoResultOrderByLike(String searchkey){
 
+        return videoServiceImpl.SearchVideoResultOrderByLike(searchkey);
+    }
+
+    根据收藏数排序：@GetMapping("/searchVideoResultOrderByFavorite")
+    public SearchResult SearchVideoResultOrderByFavorite(String searchkey ){
+        return videoServiceImpl.SearchVideoResultOrderByFavorite(searchkey);
+    }
+
+前端:
 
 
 
