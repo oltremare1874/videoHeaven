@@ -209,7 +209,7 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 添加观看记录，成功添加返回true，失败返回false:"/addViewRecord"
-    @PostMapping("/addViewRecord")
+后端：@PostMapping("/addViewRecord")
     public boolean addViewRecord(@RequestParam int userId,@RequestParam int videoId){
         return videoInteractionService.addViewRecord(userId, videoId);
     }
@@ -221,8 +221,9 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }).then((respond) => {***
 
 
- 查询观看记录，对于观看多次的视频只显示最近一次，返回按时间排序的观看记录列表和视频信息列表:"/getLatestViewRecordsByUserId"
-    @GetMapping("/getLatestViewRecordsByUserId")
+
+查询观看记录，对于观看多次的视频只显示最近一次，返回按时间排序的观看记录列表和视频信息列表:"/getLatestViewRecordsByUserId"
+后端：@GetMapping("/getLatestViewRecordsByUserId")
     public List<ViewRecord> getLatestViewRecordsByUserId(@RequestParam int userId) {
         return videoInteractionService.getLatestViewRecordsByUserId(userId);
     }
@@ -233,6 +234,12 @@ PS：登录成功后user_account要保留到前端以便后续操作
       }).then((respond) => {***
 
 
+添加转发记录，成功添加返回true，失败返回false
+后端：@PostMapping("/addRepost")
+    public boolean addRepost(@RequestParam int userId,@RequestParam int videoId){
+        return videoInteractionService.addRepost(userId, videoId);
+    }
+前端：
 
 
 
@@ -240,9 +247,36 @@ PS：登录成功后user_account要保留到前端以便后续操作
 
 
 
-评论相关
-   需要返回评论者头像，昵称，对视频的评分(五分制)，评论(可多次评论和评分)
 
+@RequestMapping("/Comment")
+评论相关：需要返回评论者头像，昵称，对视频的评分(五分制)，评论(可多次评论和评分)
+
+添加评论，同时增加评论数，修改评分，需提供userId，videoId，commentContent，rating,添加成功返回添加的评论的id，失败返回()
+后端：@PostMapping("/addComment")
+    public int addComment(@RequestParam int userId, @RequestParam int videoId,
+                          @RequestParam String commentContent, @RequestParam int rating){
+        return commentService.addComment(userId, videoId, commentContent, rating);
+    }
+前端：
+
+
+
+
+逻辑删除评论，同时减少评论数，修改评分，需提供评论id，成功则返回true，失败返回false
+后端：@PostMapping("/removeComment")
+    public boolean removeComment(@RequestParam int commentId){
+        return commentService.removeComment(commentId);
+    }
+前端：
+
+
+
+根据视频id获取该视频所有评论，按评论时间由近到远排序，返回视频评论信息和用户昵称，用户头像
+后端：@GetMapping("/getCommentsByVideoId")
+    public List<CommentWithUser> getCommentsByVideoId(@RequestParam int videoId){
+        return commentService.getCommentsByVideoId(videoId);
+    }
+前端：
 
 
 
