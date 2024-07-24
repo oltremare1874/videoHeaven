@@ -268,9 +268,9 @@ PS：登录成功后user_account要保留到前端以便后续操作
     分享数
     视频评分
     视频封面
-后端：public SearchResult SearchVideoResult(String video_title){
-        int searchVideoNum = videoDao.searchVideoNum(video_title);
-        List<Video> searchVideoInformation = videoDao.searchVideoInformation(video_title);
+后端：public SearchResult SearchVideoResult(String searchkey){
+        int searchVideoNum = videoDao.searchVideoNum(searchkey);
+        List<Video> searchVideoInformation = videoDao.searchVideoInformation(searchkey);
         SearchResult searchvideoresult = new SearchResult(searchVideoNum,searchVideoInformation);
 
         return searchvideoresult;
