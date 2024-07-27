@@ -35,8 +35,8 @@ const dialogVisible_share = ref(true) // 这是关于分享对话框的
     <span>分享内容：<el-input v-model="share_text" style="width: 240px" autosize placeholder="输入你对视频的感想吧！"  /></span>
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="open_window(); dialogVisible_share = false">确定</el-button>
-        <el-button type="primary" @click="dialogVisible_share = false">
+        <el-button @click="open_window(); dialogVisible_share = false" type="success">确定</el-button>
+        <el-button type="danger" @click="dialogVisible_share = false">
           我再想想
         </el-button>
       </div>
