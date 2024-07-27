@@ -1,0 +1,19 @@
+# 1.Share功能
+## 涉及到的文件：Video.vue
+<script lang='ts' setup>  
+  // 这里是消息弹窗  
+  const open_window = () => {  
+  console.log('test')  
+  ElMessageBox.alert('分享成功！', '操作提示', {  
+    // if you want to disable its autofocus  
+    // autofocus: false,  
+    confirmButtonText: 'OK',  
+    callback: (action: Action) => {  
+      ElMessage({  
+        type: 'info',  
+        message: `action: ${action}`,  
+      })  
+    },  
+  })  
+}   
+</script>
