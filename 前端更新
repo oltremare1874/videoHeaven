@@ -15,5 +15,30 @@
       })  
     },  
   })  
-}   
+}
+
+const share_text = ref('') // 这是分享框里面的内容
+
+const dialogVisible_share = ref(true) // 这是关于分享对话框的
 </script>
+
+<template>
+  // 这里是HTML中关于分享的设置
+   <el-button class="share-button" :icon="Share" type="success" round @click="dialogVisible_share=true" size="large" />
+  <el-dialog
+    v-model="dialogVisible_share"
+    title="分享提示"
+    width="400"
+    :before-close="handleClose"
+  >
+    <span>分享内容：<el-input v-model="share_text" style="width: 240px" autosize placeholder="输入你对视频的感想吧！"  /></span>
+    <template #footer>
+      <div class="dialog-footer">
+        <el-button @click="open_window(); dialogVisible_share = false">确定</el-button>
+        <el-button type="primary" @click="dialogVisible_share = false">
+          我再想想
+        </el-button>
+      </div>
+    </template>
+  </el-dialog>
+</template>
