@@ -18,7 +18,7 @@
   })  
 }
 
-const share_text = ref('') // 这是分享框里面的内容
+const share_text = ref('') // 这是分享框里面的内容，具体怎么调用具体分析
 
 const dialogVisible_share = ref(true) // 这是关于分享对话框的
 </script>
